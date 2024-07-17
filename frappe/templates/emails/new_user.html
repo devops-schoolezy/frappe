@@ -4,11 +4,21 @@
 {% set site_link = "<a href='" + site_url + "'>" + site_url + "</a>" %}
 <p>{{_("A new account has been created for you at {0}").format(site_link)}}.</p>
 <p>{{_("Your login id is")}}: <b>{{ user }}</b>
-<p>{{_("Click on the link below to complete your registration and set a new password")}}.</p>
+<p>{{_("Click on the link below to complete your registration and set a new password")}}.</ p>
 
 <p style="margin: 15px 0px;">
-	<a href="{{ link }}" rel="nofollow" class="btn btn-primary">{{ _("Complete Registration") }}</a>
+	<a href="{{ link }}" rel="nofollow" class="btn btn-primary">{{ _("Complete Registra
+		tion") }}</a>
 </p>
+<p></p>
+{% set android = "https://play.google.com/store/apps/details?id=in.schoolezy.schoolezy" %}
+{% set ios = "https://apps.apple.com/in/app/schoolezy/id6476906331" %}
+
+{% set android_link = "<a href='" ~ android ~ "'>" ~ "Android App" ~ "</a>" %}
+<p>{{ _("Download {0}").format(android_link) }}.</p>
+
+{% set ios_link = "<a href='" ~ ios ~ "'>" ~ "IOS App" ~ "</a>" %}
+<p>{{ _("Download {0}").format(ios_link) }}.</p>
 
 {% if created_by != "Administrator" %}
 <br>
